@@ -8,9 +8,9 @@ import SpellList from './components/SpellList'
 function App() {
   const [savedSpells, setSavedSpells] = useState([])
 
-  const saveSpell = e => {
-    e.preventDefault()
-    setSavedSpells([...savedSpells, e.target.value])
+  const saveSpell = spell => {
+    setSavedSpells([...savedSpells, spell])
+    console.log(savedSpells)
   }
 
   return (

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { SavedSpellsContext } from '../context/SavedSpellsContext'
 
 const SpellDetails = props => {
+    const { savedSpells, saveSpell } = useContext(SavedSpellsContext)
+
+    const handleClick = e => {
+        e.preventDefault()
+        saveSpell(props.spell.index)
+    }
 
     return (
         <div>
@@ -13,6 +21,7 @@ const SpellDetails = props => {
             {props.spell.higher_level ? 
                 <span><h5>At Higher Levels:</h5>{props.spell.higher_level.map((p, index) => <p key={index}>{p}</p>)}</span> 
                 : <div></div> }
+            <button onClick={handleClick}>Save Spell</button>
         </div>
     )
 }
