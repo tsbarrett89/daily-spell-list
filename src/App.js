@@ -1,11 +1,11 @@
 import React from 'react';
 
+import SpellList from './components/SpellList'
+
 
 function App() {
   return (
-    <div >
-      
-    </div>
+    <SpellList />
   );
 }
 
