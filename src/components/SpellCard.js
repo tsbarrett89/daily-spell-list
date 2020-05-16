@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import SpellDetails from './SpellDetails'
+
 const SpellCard = props => {
     const [spellDetails, setSpellDetails] = useState({})
     const [details, setDetails] = useState(false)
@@ -25,6 +27,7 @@ const SpellCard = props => {
     return (
         <div>
             <h3>{props.spell.name}</h3>
+            {details ? <SpellDetails spell={spellDetails} /> : <div></div>}
             {!details ? <button onClick={getSpellDetails}>details</button> : <button onClick={hideDetails}>hide details</button>}
         </div>
     )
