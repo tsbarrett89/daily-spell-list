@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 
 import { SavedSpellsContext } from './context/SavedSpellsContext'
 
 import SpellList from './components/SpellList'
+import SavedSpellList from './components/SavedSpellList'
+import Header from './components/Header'
 
 
 function App() {
@@ -16,7 +19,10 @@ function App() {
   return (
     <div>
       <SavedSpellsContext.Provider value={{ savedSpells, saveSpell }} >
-        <SpellList />
+        <Header />
+
+        <Route exact path='/' component={SpellList} />
+        <Route path='/saved-spells' component={SavedSpellList} />
       </SavedSpellsContext.Provider>
     </div>
     
