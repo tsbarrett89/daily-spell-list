@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import SpellCard from './SpellCard'
+import SearchBar from './SearchBar'
 
 const SpellList = () => {
     const [spells, setSpells] = useState([])
+    const [query, setQuery] = useState('')
+    const [filteredSpells, setFilteredSpells] = useState(spells)
 
     useEffect(() => {
         axios
@@ -16,9 +19,15 @@ const SpellList = () => {
             .catch(err => console.log(err.response))
     }, [])
 
+    useEffect(() => {
+        setFilteredSpells(spells.filter(spell => 
+            spell.name.toLowerCase().includes(query.toLowerCase())))
+    }, [spells, query])
+
     return (
         <section>
-            {spells.map((spell, index) => <SpellCard key={index} spell={spell} />)}
+            <SearchBar query={query} setQuery={setQuery} />
+            {filteredSpells.map((spell, index) => <SpellCard key={index} spell={spell} />)}
         </section>
     )
 }
