@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
 
     return (
-        <div>
+        <header>
             <h1>Spell List Generator</h1>
             <nav>
                 <NavLink to='/'>Spells</NavLink>
                 <NavLink to='/saved-spells'>Spell List</NavLink>
             </nav>
-        </div>
+        </header>
     )
 }
 

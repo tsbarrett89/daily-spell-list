@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <SavedSpellsContext.Provider value={{ savedSpells, saveSpell }} >
         <Header />
 
