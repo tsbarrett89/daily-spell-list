@@ -7,7 +7,7 @@ const SpellDetails = props => {
 
     const handleClick = e => {
         e.preventDefault()
-        saveSpell(props.spell.index)
+        saveSpell({name: props.spell.name, index: props.spell.index})
     }
 
     return (
