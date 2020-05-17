@@ -12,7 +12,6 @@ const SpellCard = props => {
         axios
             .get(`https://cors-anywhere.herokuapp.com/http://dnd5eapi.co/api/spells/${props.spell.index}`)
             .then(res => {
-                console.log(res.data)
                 setSpellDetails(res.data)
                 setDetails(true)
             })

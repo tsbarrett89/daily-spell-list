@@ -13,7 +13,6 @@ const SpellList = () => {
         axios
             .get('https://cors-anywhere.herokuapp.com/http://dnd5eapi.co/api/spells')
             .then(res => {
-                console.log(res.data)
                 setSpells(res.data.results)
             })
             .catch(err => console.log(err.response))

@@ -7,8 +7,6 @@ import SpellCard from './SpellCard'
 const SavedSpellList = () => {
     const { savedSpells } = useContext(SavedSpellsContext)
 
-    console.log(savedSpells)
-
     return (
         <section>
             <h2>Saved Spells</h2>
