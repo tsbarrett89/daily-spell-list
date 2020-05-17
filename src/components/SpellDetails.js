@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { SavedSpellsContext } from '../context/SavedSpellsContext'
 
 const SpellDetails = props => {
-    const { savedSpells, saveSpell } = useContext(SavedSpellsContext)
+    const { saveSpell } = useContext(SavedSpellsContext)
 
     const handleClick = e => {
         e.preventDefault()
