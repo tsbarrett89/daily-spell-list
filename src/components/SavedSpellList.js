@@ -10,11 +10,12 @@ const SavedSpellList = () => {
     console.log(savedSpells)
 
     return (
-        <div>
+        <section>
+            <h2>Saved Spells</h2>
             {savedSpells.map((spell, index) => {
                 return <SpellCard key={index} spell={spell} />
             })}
-        </div>
+        </section>
     )
 }
 

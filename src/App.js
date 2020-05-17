@@ -20,9 +20,10 @@ function App() {
     <div className="container">
       <SavedSpellsContext.Provider value={{ savedSpells, saveSpell }} >
         <Header />
-
-        <Route exact path='/' component={SpellList} />
-        <Route path='/saved-spells' component={SavedSpellList} />
+          <section className="spellContainer">
+            <SpellList />
+            <SavedSpellList />
+          </section>
       </SavedSpellsContext.Provider>
     </div>
     

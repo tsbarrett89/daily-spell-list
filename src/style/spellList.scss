@@ -1,0 +1,11 @@
+.spellContainer {
+    width: 100%;
+    display: flex;
+
+    section {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

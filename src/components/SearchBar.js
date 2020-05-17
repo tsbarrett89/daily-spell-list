@@ -9,6 +9,7 @@ const SearchBar = props => {
 
     return (
         <form>
+            <label htmlFor='query'>Search by spell name</label>
             <input
                 name='query'
                 value={props.query}

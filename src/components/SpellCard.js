@@ -25,10 +25,14 @@ const SpellCard = props => {
     }
 
     return (
-        <div>
-            <h3>{props.spell.name}</h3>
+        <div className="spellCard">
+            <span className="spellCardHeader">
+                <h3>{props.spell.name}</h3>
+                {!details ? <button onClick={getSpellDetails}>details</button> : <button onClick={hideDetails}>hide details</button>}
+            </span>
+            
             {details ? <SpellDetails spell={spellDetails} /> : <div></div>}
-            {!details ? <button onClick={getSpellDetails}>details</button> : <button onClick={hideDetails}>hide details</button>}
+            
         </div>
     )
 }
