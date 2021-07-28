@@ -4,7 +4,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1>Spell List Generator</h1>
+            <h1>Spell List Generator Ya</h1>
         </header>
     )
 }
